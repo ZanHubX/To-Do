@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import Heading from "./components/Heading";
+import CreateTask from "./components/CreateTask";
+import TaskList from "./components/TaskList";
+import Task from "./components/Task";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [tasks, setTask] = useState([
+    "Complete React and TypeScript tutorials",
+    "Build a small project using React and TypeScript",
+    "Stay updated with the latest trends in full stack development",
+    "Research basic principles of graphic design",
+    "Follow tutorials on character design",
+  ]);
 
+  const addTask = (newTask) => {
+    setTask([...tasks, newTask]);
+  }
+
+  const removeTask = (taskToRemove) => {
+    setTask(tasks.filter((task) => task !== taskToRemove));
+  }
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="p-10">
+      <Heading />
+      <CreateTask addTask={addTask}/>
+      <TaskList removeTask={removeTask} tasks={tasks} />
+    </div>
+  );
+};
 
-export default App
+export default App;
