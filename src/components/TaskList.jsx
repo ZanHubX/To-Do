@@ -7,8 +7,8 @@ const TaskList = () => {
 
   return (
     <div>
-      <h3 className="font-bold font-serif text-xl mb-3">
-        Task List (Total {tasks.length}, Done{" "}
+      <h3 className="font-bold font-serif text-xl mb-3 text-color">
+        Today Plan (Total {tasks.length}, Done{" "}
         {tasks.filter((el) => el.isDone).length})
       </h3>
       {tasks.map((el) => (

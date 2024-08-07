@@ -14,24 +14,22 @@ const Task = ({ job: { id, task, isDone } }) => {
     doneTask(id);
   };
   return (
-    <div className=" flex justify-between items-center border-2 border-slate-300 p-3 mb-2 rounded-lg last:mb-8">
-      <div className="flex items-center gap-3">
+    <div className=" flex justify-between items-center border-2 border-slate-800 p-3 mb-2 rounded-lg last:mb-8 bg-slate-800">
+      <div className="flex items-center gap-3 text-color">
         <input
           type="checkbox"
           onChange={handleOnChange}
           checked={isDone}
-          className="size-4"
+          className="size-4 "
         />
         <p className={isDone ? "line-through" : ""}>{task}</p>
       </div>
-      <button
-        onClick={handleRemoveTaskBtn}
-        className="border-2 bg-red-300 border-slate-300 p-3 rounded-lg "
-      >
-        Delete
+      <button onClick={handleRemoveTaskBtn} className=" p-3 rounded-lg ">
+        <box-icon name="trash" color="#ee4a4a"></box-icon>
       </button>
     </div>
   );
 };
 
 export default Task;
+

@@ -22,15 +22,18 @@ const CreateTask = () => {
 
 
   return (
-    <div className="flex mb-5">
+    <div className="flex mb-5 text-color">
       <input
         type="text"
-        placeholder="Write down your plan!!"
-        className="flex-grow bg-slate-100 border-2 border-slate-300 rounded-l-lg p-2 "
+        placeholder="Write down your today plan !!"
+        className="flex-grow bg-slate-800 border-2 border-slate-800 rounded-l-lg p-2 text-color"
         onChange={handleOnChange}
         value={job}
       />
-      <button onClick={handleAddTaskBtn} className="bg-slate-300 border-2 border-slate-300 rounded-r-lg py-2 px-4 ">
+      <button
+        onClick={handleAddTaskBtn}
+        className="text-color bg-slate-800  border-2 border-slate-800 rounded-r-lg py-2 px-4  "
+      >
         {" "}
         Add Task
       </button>

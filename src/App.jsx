@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <TextProvider>
-      <div className="p-10 bg-screen">
+      <div className="p-10 bg-screen h-screen">
         <Heading />
         <CreateTask  />
         <TaskList />
