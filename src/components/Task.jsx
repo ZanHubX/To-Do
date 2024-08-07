@@ -1,16 +1,26 @@
 import React from 'react'
 
-const Task = ({job,removeTask}) => {
+const Task = ({job: {id,task,isDone},removeTask , doneTask}) => {
 
     const handleRemoveTaskBtn = () =>{
         if(confirm("Are you sure to delete this task?")){
-            removeTask(job)
+            removeTask(id)
         }
+    }
+
+    const handleOnChange = () =>{
+          doneTask(id)
     }
   return (
     <div className=" flex justify-between items-center border-2 border-slate-300 p-3 mb-2 rounded-lg last:mb-0">
-      <p>{job}</p>
-      <button onClick={handleRemoveTaskBtn} className="border-2 bg-slate-300 border-slate-300 p-3 rounded-lg">
+      <div className="flex items-center gap-3">
+        <input type="checkbox" onChange={handleOnChange} checked={isDone} className="size-4" />
+        <p className={isDone ? "line-through" : ""}>{task}</p>
+      </div>
+      <button
+        onClick={handleRemoveTaskBtn}
+        className="border-2 bg-red-300 border-slate-300 p-3 rounded-lg "
+      >
         Delete
       </button>
     </div>

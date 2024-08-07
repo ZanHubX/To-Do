@@ -7,7 +7,12 @@ const CreateTask = ({addTask}) => {
   };
 
   const handleAddTaskBtn = () => {
-    addTask(job);
+    const newtask = {
+      id: Date.now(),
+      task: job,
+      isDone: false,
+    };
+    addTask(newtask);
     setJob("");
   }
 
