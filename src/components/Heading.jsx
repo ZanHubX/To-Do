@@ -2,7 +2,7 @@ import React from 'react'
 
 const Heading = () => {
   return (
-    <h1 className='font-bold font-serif mb-5 text-3xl'>Task Manager</h1>
+    <h1 className='font-bold font-serif mb-5 text-3xl'>What is the plan for today?</h1>
   )
 }
 

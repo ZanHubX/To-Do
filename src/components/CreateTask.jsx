@@ -25,7 +25,7 @@ const CreateTask = () => {
     <div className="flex mb-5">
       <input
         type="text"
-        placeholder="Enter Task"
+        placeholder="Write down your plan!!"
         className="flex-grow bg-slate-100 border-2 border-slate-300 rounded-l-lg p-2 "
         onChange={handleOnChange}
         value={job}
