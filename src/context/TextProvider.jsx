@@ -11,7 +11,7 @@ const TextProvider = ({ children }) => {
           {
             id: 1,
             task: "",
-            isDone: false,
+            isDone: "",
           },
           
         ];
