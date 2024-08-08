@@ -10,8 +10,8 @@ const TextProvider = ({ children }) => {
       : [
           {
             id: 1,
-            task: "",
-            isDone: "",
+            task: "Make my day",
+            isDone: false,
           },
           
         ];
