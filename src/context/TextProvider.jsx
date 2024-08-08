@@ -10,27 +10,27 @@ const TextProvider = ({ children }) => {
       : [
           {
             id: 1,
-            task: "Complete React and TypeScript tutorials",
+            task: "",
             isDone: false,
           },
           {
             id: 2,
-            task: "Build a small project using React and TypeScript",
+            task: "",
             isDone: false,
           },
           {
             id: 3,
-            task: "Stay updated with the latest trends in full stack development",
+            task: "",
             isDone: true,
           },
           {
             id: 4,
-            task: "Research basic principles of graphic design",
+            task: "",
             isDone: false,
           },
           {
             id: 5,
-            task: "Follow tutorials on character design",
+            task: "",
             isDone: false,
           },
         ];
