@@ -13,26 +13,7 @@ const TextProvider = ({ children }) => {
             task: "",
             isDone: false,
           },
-          {
-            id: 2,
-            task: "",
-            isDone: false,
-          },
-          {
-            id: 3,
-            task: "",
-            isDone: false,
-          },
-          {
-            id: 4,
-            task: "",
-            isDone: false,
-          },
-          {
-            id: 5,
-            task: "",
-            isDone: false,
-          },
+          
         ];
   });
 
